@@ -49,6 +49,9 @@
     ; the reservations
     (has_reservation livingstone suite thursday) (has_reservation livingstone suite friday) (has_reservation livingstone suite saturday)
     (has_reservation the_fellowship deluxe saturday)
+    (has_reservation mardi_gras cellar friday) (has_reservation mardi_gras cellar saturday)
+    (has_reservation friends regular saturday)
+    (has_reservation vox_machina deluxe friday)
     (has_reservation kebab_lovers suite sunday)
     (has_reservation taco_lovers cellar thursday) (has_reservation taco_lovers cellar sunday)
     (has_reservation pizza_dudes regular thursday) (has_reservation pizza_dudes regular friday) (has_reservation pizza_dudes regular sunday)
@@ -82,7 +85,7 @@
         (has_booked_room suite friday) (has_booked_room deluxe friday) (has_booked_room cellar friday) (has_booked_room regular friday)
         (has_booked_room suite saturday) (has_booked_room deluxe saturday) (has_booked_room cellar saturday) (has_booked_room regular saturday)
         (has_booked_room suite sunday) (has_booked_room deluxe sunday) (has_booked_room cellar sunday) (has_booked_room regular sunday)
-        
+    
         (has_booked_party livingstone thursday) (has_booked_party livingstone friday) (has_booked_party livingstone saturday)
         (has_booked_party the_fellowship saturday)
         (has_booked_party mardi_gras friday) (has_booked_party mardi_gras saturday)
