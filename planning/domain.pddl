@@ -53,7 +53,7 @@
         :parameters (?p ?r ?d)
         :precondition (and
             (party ?p) (room ?r) (day ?d) (is_current_day ?d) (has_reservation ?p ?r ?d) (is_vacant ?r) (is_clean ?r)
-        ); TODO: fill in the necessary preconditions
+        )
         :effect (and
             (has_booked_room ?r ?d) (has_booked_party ?p ?d) (has_room_key ?p ?r)
             (not (is_vacant ?r)) (not (is_clean ?r))
@@ -70,11 +70,9 @@
         :precondition (and
             (party ?p) (room ?r) (day ?d) (is_current_day ?d) (not (has_booked_room ?r ?d)) (has_room_key ?p ?r)
         )
-        ; TODO: fill in the necessary preconditions
         :effect (and
             (not (has_room_key ?p ?r)) (is_vacant ?r)
         )
-        ; TODO: fill in the resulting effects
     )
     ; The staff clean the room
 
@@ -83,15 +81,12 @@
     ; The room is cleaned
     (:action clean_room
         :parameters (?r ?d)
-        ; TODO: fill in the affected parameter
         :precondition (and
             (room ?r) (is_vacant ?r) (not (is_clean ?r))
         )
-        ; TODO: fill in the necessary preconditions
         :effect (and
             (is_clean ?r)
         )
-        ; TODO: fill in the resulting effect
     )
     ; Take a time-step forward one day
 
@@ -103,10 +98,8 @@
         :precondition (and
             (is_current_day ?d1) (is_next_day ?d1 ?d2)
         )
-        ; TODO: fill in the necessary preconditions
         :effect (and
             (is_current_day ?d2) (not (is_current_day ?d1))
         )
-        ; TODO: fill in the resulting effects
     )
 )
