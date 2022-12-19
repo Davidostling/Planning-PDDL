@@ -1,5 +1,6 @@
 (define (problem festival) ; the problem name
 (:domain tavern) ; the domain in which the problem takes place
+; author: David Östling, dostl@kth.se
 (:objects ; the objects in the problem
     ; reserved parties
     livingstone
