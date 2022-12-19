@@ -7,12 +7,20 @@
     mardi_gras
     friends
     vox_machina
+    kebab_lovers
+    taco_lovers
+    pizza_dudes
+    burger_dudes
     ; drop in parties
     p1
     p2
     p3
     p4
     p5
+    p6
+    p7
+    p8
+    p9
     ; rooms
     suite
     deluxe
@@ -55,7 +63,7 @@
     (is_size cellar medium)
     (is_size regular medium)
     ; the size structure
-    (fits small small) (fits small large) (fits large large) (fits medium large) fits(medium medium) fits(small medium)
+    (fits small small) (fits small large) (fits large large) (fits medium large) (fits medium medium) (fits small medium)
     ; thursday is the current day
     (is_current_day thursday)
     ; the day order
@@ -70,12 +78,22 @@
     ; all rooms are booked each day
     ; the parties with reservations were booked accordingly
     (and
-        (has_booked_room suite thursday) (has_booked_room deluxe thursday)
-        (has_booked_room suite friday) (has_booked_room deluxe friday)
-        (has_booked_room suite saturday) (has_booked_room deluxe saturday)
+        (has_booked_room suite thursday) (has_booked_room deluxe thursday) (has_booked_room cellar thursday) (has_booked_room regular thursday)
+        (has_booked_room suite friday) (has_booked_room deluxe friday) (has_booked_room cellar friday) (has_booked_room regular friday)
+        (has_booked_room suite saturday) (has_booked_room deluxe saturday) (has_booked_room cellar saturday) (has_booked_room regular saturday)
+        (has_booked_room suite sunday) (has_booked_room deluxe sunday) (has_booked_room cellar sunday) (has_booked_room regular sunday)
         
-        (has_booked_party livingstone friday) (has_booked_party livingstone saturday)
+        (has_booked_party livingstone thursday) (has_booked_party livingstone friday) (has_booked_party livingstone saturday)
         (has_booked_party the_fellowship saturday)
+        (has_booked_party mardi_gras friday) (has_booked_party mardi_gras saturday)
+        (has_booked_party friends saturday)
+        (has_booked_party vox_machina friday)
+        (has_booked_party kebab_lovers sunday) 
+        (has_booked_party taco_lovers thursday) (has_booked_party taco_lovers sunday) 
+        (has_booked_party pizza_dudes thursday) (has_booked_party pizza_dudes friday) (has_booked_party pizza_dudes sunday)
+        (has_booked_party burger_dudes thursday) (has_booked_party burger_dudes sunday) 
+
+
     )
 )
 )
